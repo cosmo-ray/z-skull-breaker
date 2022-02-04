@@ -7,6 +7,28 @@
 	    "type" : "module"
     }],
     "main" : {
+	"<type>" : "menu",
+	"entries" : [
+	    {
+		"text" : "Play",
+		"next" : "Z Skull Breaker.game",
+		"action" : "menuNext",
+	    },
+	    {
+		"text" : "Full Screen",
+		"action" : "FullScreenOnOff"
+	    },
+	    {
+		"text" : "Quit",
+		"text-color" : "rgba: 255 0 0 255",
+		"action" : "FinishGame"
+	    }
+	],
+	"text-align" : "center",
+	"text-color" : "rgba: 100 100 100 255",
+	"background" : "rgba: 200 200 200 255"
+    },
+    "game" : {
 	"<type>" : "asteroide-shooter",
 	"type": "skull-breaker",
 	"lvlup": [
