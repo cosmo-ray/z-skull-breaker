@@ -42,8 +42,6 @@ jobs:
           cd tmp
           unzip yirl.zip
           cd ..
-          mv tmp/modules/* modules/
-          rm -rvf tmp/modules
           mv tmp/* .
           rm -rvf tmp
           mv yirl-loader.exe Z-Breaker.exe
