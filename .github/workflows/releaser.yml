@@ -1,0 +1,66 @@
+# This is a basic workflow to help you get started with Actions
+
+name: releaser
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: snickerbockers/submodules-init@v4
+      
+      - name: Run a multi-line script
+        run: |
+          rm -rvf .git
+          mkdir ../z-breaker_I_use_Arch_BTW
+          cp -rf * ../z-breaker_I_use_Arch_BTW/
+          mv ../z-breaker_I_use_Arch_BTW .
+          cp -rf z-breaker_I_use_Arch_BTW z-breaker_windows
+          wget -q https://github.com/cosmo-ray/yirl/releases/download/latest/yirl-mods.tar.gz
+          wget -q https://github.com/cosmo-ray/yirl/releases/download/latest_win/yirl.zip
+          mv yirl-mods.tar.gz z-breaker_I_use_Arch_BTW
+          cd z-breaker_I_use_Arch_BTW
+          tar -xf yirl-mods.tar.gz
+          rm yirl-mods.tar.gz
+          echo z-breaker_I_use_Arch_BTW
+          echo '#!/bin/bash' > z-breaker.sh
+          chmod +x z-breaker.sh
+          echo yirl/yirl-loader.sh -d ./ -n Z-Breaker -P yirl/ > z-breaker.sh
+          cd ..
+          mv yirl.zip z-breaker_windows
+          cd z-breaker_windows
+          mkdir tmp
+          mv yirl.zip tmp
+          cd tmp
+          unzip yirl.zip
+          cd ..
+          mv tmp/modules/* modules/
+          rm -rvf tmp/modules
+          mv tmp/* .
+          rm -rvf tmp
+          mv yirl-loader.exe Z-Breaker.exe
+          # it seems sazanami is out on windows, so no japanese for its users.
+          rm sazanami-mincho.ttf
+          cp DejaVuSansMono.ttf sazanami-mincho.ttf
+          rm yirl.zip
+          cd ..
+          tar cfz  z-breaker_I_use_Arch_BTW.tar.gz ./z-breaker_I_use_Arch_BTW/
+          zip -r z-breaker_windows.zip ./z-breaker_windows/
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            z-breaker_I_use_Arch_BTW.tar.gz
+            z-breaker_windows.zip
