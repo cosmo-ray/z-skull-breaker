@@ -12,7 +12,11 @@
 	"lvlup": [
 	    {
 		"img": "go_go_muscle.png",
-		"action": ["asteroide-shooter.increase_atk_speed", 1]
+		"action": "asteroide-shooter.increase_atk_speed"
+	    },
+	    {
+		"img": "shojo spirit.png",
+		"action": "asteroide-shooter.attack_nb_1"
 	    }
 	]
     }
