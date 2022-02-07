@@ -3,6 +3,8 @@ Kill le Z en masse, when they piss me off.
 
 Small game about killing zombies.
 
+![](Screenshot_20220207_015846.png)
+
 # How to Play:
 
 ## Start:
@@ -13,6 +15,11 @@ use `Z-Breaker.exe` on windows, and `z-breaker.sh` on superior OS
 click (left, right or middle) to fire.
 
 `wasd`, or arrow keys to move.
+
+## Download
+
+Nightly Build Here:
+https://github.com/cosmo-ray/z-skull-breaker/releases/tag/latest
 
 # code
 
