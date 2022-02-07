@@ -11,7 +11,7 @@
 	"entries" : [
 	    {
 		"text" : "Play",
-		"next" : "Z Skull Breaker.game",
+		"next" : "Z Skull Breaker.z-shooter",
 		"action" : "menuNext",
 	    },
 	    {
@@ -28,7 +28,7 @@
 	"text-color" : "rgba: 100 100 100 255",
 	"background" : "rgba: 200 200 200 255"
     },
-    "game" : {
+    "z-shooter" : {
 	"<type>" : "asteroide-shooter",
 	"type": "skull-breaker",
 	"lvlup": [
