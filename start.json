@@ -28,6 +28,7 @@
 	"text-color" : "rgba: 100 100 100 255",
 	"background" : "rgba: 200 200 200 255"
     },
+    "make-prototype": "z-shooter",
     "z-shooter" : {
 	"<type>" : "asteroide-shooter",
 	"type": "skull-breaker",
