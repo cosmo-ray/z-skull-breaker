@@ -34,10 +34,12 @@
 	"type": "skull-breaker",
 	"lvlup": [
 	    {
+		"base-mod-path": "Z Skull Breaker",
 		"img": "go_go_muscle.png",
 		"action": "asteroide-shooter.increase_atk_speed"
 	    },
 	    {
+		"base-mod-path": "Z Skull Breaker",
 		"img": "shojo spirit.png",
 		"action": "asteroide-shooter.attack_nb_1"
 	    }
