@@ -25,3 +25,11 @@ https://github.com/cosmo-ray/z-skull-breaker/releases/tag/latest
 
 This game is just configuration over the shooter modules from my game engine, you can find it here:
 https://github.com/cosmo-ray/yirl/tree/master/modules/shooter
+
+# TODO:
+
+- Add Fragmentation Axe (Black Axe image is alerady here)
+- Auto fire ?
+- Have go go muscle apply it's effect to all weapons
+- Gong: invock a naked guy, with a laser saber that kill a random enemy and diseapear
+- Dakedo baby
